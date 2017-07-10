@@ -1,6 +1,14 @@
-// import SomeComponent from './components/someComponent';
+'use strict';
 
-// export default {
-//   SomeComponent
-// }
-"use strict";
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Example = undefined;
+
+var _example = require('./components/example');
+
+var _example2 = _interopRequireDefault(_example);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.Example = _example2.default;

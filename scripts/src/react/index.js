@@ -1,5 +1,3 @@
-// import SomeComponent from './components/someComponent';
+import Example from './components/example';
 
-// export default {
-//   SomeComponent
-// }
+export { Example };
