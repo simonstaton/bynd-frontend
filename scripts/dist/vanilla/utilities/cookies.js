@@ -18,19 +18,20 @@ var Cookies = function () {
   _createClass(Cookies, null, [{
     key: 'set',
     value: function set(name) {
-      var value = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "";
+      var value = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
 
-      switch (typeof value === 'undefined' ? 'undefined' : _typeof(value)) {
+      var data = value;
+      switch (typeof data === 'undefined' ? 'undefined' : _typeof(data)) {
         case 'object':
-          value = escape(JSON.stringify(value));
+          data = escape(JSON.stringify(data));
           break;
         case 'string':
-          value = escape(value);
+          data = escape(data);
           break;
         default:
-          value = value.toString();
+          data = data.toString();
       }
-      document.cookie = name + "=" + value;
+      document.cookie = name + '=' + data;
     }
   }, {
     key: 'delete',
@@ -40,10 +41,10 @@ var Cookies = function () {
   }, {
     key: 'get',
     value: function get(name) {
-      var key = void 0,
-          value = void 0,
-          cookies = document.cookie.split(';');
-      for (var i = 0; i < cookies.length; i++) {
+      var key = void 0;
+      var value = void 0;
+      var cookies = document.cookie.split(';');
+      for (var i = 0; i < cookies.length; i += 1) {
         key = cookies[i].substr(0, cookies[i].indexOf('=')).replace(/^\s+|\s+$/gm, '');
         value = cookies[i].substr(cookies[i].indexOf('=') + 1);
         if (key === name) {

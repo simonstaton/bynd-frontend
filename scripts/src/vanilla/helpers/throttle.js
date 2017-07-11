@@ -3,16 +3,15 @@
 // }, 500));
 
 export default function throttle(func, ms = 50, context = window) {
-  let to;
   let wait = false;
   return (...args) => {
-    let later = () => {
+    const later = () => {
       func.apply(context, args);
     };
-    if(!wait)  {
+    if (!wait) {
       later();
       wait = true;
-      to = setTimeout(() => {
+      setTimeout(() => {
         wait = false;
       }, ms);
     }

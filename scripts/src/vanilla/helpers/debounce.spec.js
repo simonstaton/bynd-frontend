@@ -3,7 +3,6 @@ import debounce from './debounce';
 
 describe('debounce helper function', () => {
   it('should debounce function calls', () => {
-
     jest.useFakeTimers();
 
     const callback = jest.fn();

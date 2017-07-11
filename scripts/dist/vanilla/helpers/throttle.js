@@ -12,7 +12,6 @@ function throttle(func) {
   var ms = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 50;
   var context = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : window;
 
-  var to = void 0;
   var wait = false;
   return function () {
     for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
@@ -25,7 +24,7 @@ function throttle(func) {
     if (!wait) {
       later();
       wait = true;
-      to = setTimeout(function () {
+      setTimeout(function () {
         wait = false;
       }, ms);
     }

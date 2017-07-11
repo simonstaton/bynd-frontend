@@ -2,10 +2,9 @@
 
 export default function truncate(value, limit) {
   if (value.length > limit) {
-    let trimmed = value.substr(0, limit);
-    let lastWordIndex = Math.min(trimmed.length, trimmed.lastIndexOf(" "));
+    const trimmed = value.substr(0, limit);
+    const lastWordIndex = Math.min(trimmed.length, trimmed.lastIndexOf(' '));
     return `${trimmed.substr(0, lastWordIndex)}...`;
-  } else {
-    return value;
   }
-};
+  return value;
+}

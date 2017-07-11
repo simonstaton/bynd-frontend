@@ -1,3 +1,3 @@
 import Example from './components/example';
 
-export { Example };
+export default { Example };

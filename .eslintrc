@@ -1,3 +1,12 @@
 {
-  "extends": "./eslint/eslint.js"
+  "extends": "./eslint/index.js",
+  "globals": {
+      "it": true,
+      "describe": true,
+      "test": true,
+      "jest": true,
+      "expect": true,
+      "window": true,
+      "document": true
+  }
 }
