@@ -43,7 +43,8 @@
     "eslint-config-google": "^0.7.1",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
-    "eslint-plugin-react": "^7.1.0"
+    "eslint-plugin-react": "^7.1.0",
+    "react": "^15.6.1"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -53,8 +54,13 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "eslint": "^4.2.0",
+    "eslint-config-airbnb": "^15.0.2",
+    "eslint-config-google": "^0.7.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0",
     "jest": "^20.0.4",
-    "react": "^15.6.1",
     "react-test-renderer": "^15.6.1"
   }
 }

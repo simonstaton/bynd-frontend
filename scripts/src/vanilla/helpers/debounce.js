@@ -4,10 +4,10 @@
 
 export default function debounce(fn, wait) {
   let timeout;
-  return function () {
-    clearTimeout(timeout); 
+  return (...args) => {
+    clearTimeout(timeout);
     timeout = setTimeout(() => {
-      fn.apply(this, arguments);
+      fn.apply(this, args);
     }, (wait || 1));
-  }
+  };
 }

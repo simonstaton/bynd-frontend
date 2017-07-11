@@ -9,14 +9,17 @@ exports.default = debounce;
 // }, 500));
 
 function debounce(fn, wait) {
+  var _this = this;
+
   var timeout = void 0;
   return function () {
-    var _this = this,
-        _arguments = arguments;
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
 
     clearTimeout(timeout);
     timeout = setTimeout(function () {
-      fn.apply(_this, _arguments);
+      fn.apply(_this, args);
     }, wait || 1);
   };
 }

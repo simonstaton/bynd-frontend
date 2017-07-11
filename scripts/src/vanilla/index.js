@@ -5,4 +5,4 @@ import debounce from './helpers/debounce';
 import throttle from './helpers/throttle';
 import truncate from './helpers/truncate';
 
-export { Cookies, DOM, debounce, throttle, truncate };
+export default { Cookies, DOM, debounce, throttle, truncate };
