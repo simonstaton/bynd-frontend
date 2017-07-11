@@ -24,7 +24,8 @@
   "scripts": {
     "build": "babel $npm_package_config_scripts_src --out-dir $npm_package_config_scripts_dist --ignore .spec.js",
     "watch": "npm run build -- --watch",
-    "test:unit": "./node_modules/jest/bin/jest.js"
+    "test:unit": "./node_modules/jest/bin/jest.js",
+    "test:lint": "./node_modules/eslint/bin/eslint.js $npm_package_config_scripts_src"
   },
   "jest": {
     "verbose": true,
