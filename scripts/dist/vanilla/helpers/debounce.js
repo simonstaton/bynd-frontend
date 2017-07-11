@@ -16,7 +16,7 @@ function debounce(fn, wait) {
 
     clearTimeout(timeout);
     timeout = setTimeout(function () {
-      return fn.apply(_this, _arguments);
+      fn.apply(_this, _arguments);
     }, wait || 1);
   };
 }
