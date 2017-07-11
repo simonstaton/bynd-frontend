@@ -39,6 +39,4 @@ var Example = function (_Component) {
   return Example;
 }(_react.Component);
 
-;
-
 exports.default = Example;
