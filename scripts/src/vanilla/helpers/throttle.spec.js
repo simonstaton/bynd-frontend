@@ -6,9 +6,9 @@ describe('throttle helper function', () => {
     jest.useRealTimers();
 
     const callback = jest.fn();
-    const throttled = throttle(callback, 2); // throttle every 5ms
+    const throttled = throttle(callback, 100); // throttle every 100ms
 
-    // invoke every 1ms for 10ms
+    // invoke every 50ms for 500ms
     let executions = 0;
     const interval = setInterval(() => {
       if (executions >= 10) {
@@ -17,13 +17,13 @@ describe('throttle helper function', () => {
         throttled();
         executions += 1;
       }
-    }, 1);
+    }, 50);
 
     // jest async callback
     const request = new Promise((resolve) => {
       setTimeout(() => {
         resolve(callback.mock.calls.length);
-      }, 60); // check call count after 60ms
+      }, 501); // check call count after 60ms
     });
 
     const iterations = await request;
