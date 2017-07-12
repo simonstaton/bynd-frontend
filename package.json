@@ -50,11 +50,16 @@
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.1.0",
     "jest": "^20.0.4",
+    "pre-commit": "^1.2.2",
     "react": "^15.6.1",
     "react-test-renderer": "^15.6.1"
   },
   "dependencies": {
     "eslint-config-airbnb": "^15.0.2",
     "eslint-config-google": "^0.8.1"
-  }
+  },
+  "pre-commit": [
+    "test:lint",
+    "test:unit"
+  ]
 }
