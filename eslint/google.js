@@ -1,6 +1,6 @@
 'use strict';
 
 module.exports = {
-  extends: 'google',
+  extends: '../node_modules/eslint-config-google/index.js',
   rules: {}
 };
