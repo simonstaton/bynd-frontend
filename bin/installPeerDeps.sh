@@ -34,6 +34,6 @@ function install_missing {
 }
 
 printf "\033[0;32m\e[1mChecking local npm modules\n"
-printf "\e[0m$(install_missing $(npm_package_is_installed eslint-plugin-jsx-a11y) eslint-plugin-jsx-a11y@5)\n"
-printf "\e[0m$(install_missing $(npm_package_is_installed eslint-plugin-import) eslint-plugin-import@2)\n"
-printf "\e[0m$(install_missing $(npm_package_is_installed eslint-plugin-react) eslint-plugin-react@7)\n"
+printf "\e[0m$(install_missing $(npm_package_is_installed eslint-plugin-jsx-a11y) eslint-plugin-jsx-a11y@^5.1.1)\n"
+printf "\e[0m$(install_missing $(npm_package_is_installed eslint-plugin-import) eslint-plugin-import@^2.7.0)\n"
+printf "\e[0m$(install_missing $(npm_package_is_installed eslint-plugin-react) eslint-plugin-react@^7.1.0)\n"
