@@ -7,13 +7,13 @@ Beyond's core front-end package for use on internal projects. This repository co
 Ensure you have access to the project on [bitbucket](https://bitbucket.org/byndops/bynd-frontend/) and your ssh key has been assigned to your user.
 
 ```
-npm install bitbucket:byndops/bynd-frontend --save-dev
+$ npm install bitbucket:byndops/bynd-frontend --save-dev
 ```
 
-If you plan on using our eslint config ensure you have the required peerDepedencies installed, this may not be required but if you get any errors check these (since npm v3 peerDepedencies are no longer automatically installed) - alternatively use [install-peerdeps](https://github.com/nathanhleung/install-peerdeps)
+If you plan on using our eslint config ensure you have the required peerDepedencies installed (since npm v3 peerDepedencies are no longer automatically installed) - alternatively use [install-peerdeps](https://github.com/nathanhleung/install-peerdeps)
 
 ```
-npm info "bitbucket:bynd-frontend" peerDepdencies
+$ node_modules/bynd-frontend/bin/installPeerDeps.sh
 ```
 
 ### Utilities/Helpers
