@@ -1,6 +1,6 @@
 # Contributing
 
-When contributing to this project ensure you follow all [internal beyond coding standards](#), each module should have a relevant spec for it's unit tests and be fully commented following [jsdoc](http://usejsdoc.org/about-getting-started.html) standards. You should also include an example how to at the top of each file and inside the relevant README.md `scripts/src/react/README.md` or `scripts/src/vanilla/README.md`.
+When contributing to this project ensure you follow all [internal beyond coding standards](https://sites.google.com/bynd.com/technology/fed/coding-standards), each module should have a relevant spec for it's unit tests and be fully commented following [jsdoc](http://usejsdoc.org/about-getting-started.html) standards. You should also include an example how to at the top of each file and inside the relevant README.md `scripts/src/react/README.md` or `scripts/src/vanilla/README.md`.
 
 All modules commited to this repository should be self contained and completly standalone excluding any styling but including html class attributes for local styling.
 
