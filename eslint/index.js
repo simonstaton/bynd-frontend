@@ -1,6 +1,6 @@
 'use strict';
 
 module.exports = {
-  extends: 'airbnb',
+  extends: '../node_modules/eslint-config-airbnb/index.js',
   rules: {}
 };
