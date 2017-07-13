@@ -26,7 +26,7 @@
     "watch": "npm run build -- --watch",
     "demo": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --watch --content-base demo/",
     "test:unit": "./node_modules/jest/bin/jest.js",
-    "test:lint": "./node_modules/eslint/bin/eslint.js $npm_package_config_scripts_src"
+    "test:lint": "./node_modules/eslint/bin/eslint.js $npm_package_config_scripts_src --ext .js --ext .jsx"
   },
   "jest": {
     "verbose": true,
@@ -55,6 +55,7 @@
     "jest": "^20.0.4",
     "path": "^0.12.7",
     "pre-commit": "^1.2.2",
+    "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-test-renderer": "^15.6.1",
