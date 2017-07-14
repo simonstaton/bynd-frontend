@@ -4,10 +4,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _example = require('./components/example');
+var _formField = require('./components/formField');
 
-var _example2 = _interopRequireDefault(_example);
+var _formField2 = _interopRequireDefault(_formField);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = { Example: _example2.default };
+exports.default = { FormField: _formField2.default };

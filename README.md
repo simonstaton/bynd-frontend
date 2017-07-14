@@ -56,6 +56,32 @@ We expose a custom eslint config that inherits from the [airbnb eslint config](h
 }
 ```
 
+## Development
+
+Install depedencies
+
+```
+npm install
+```
+
+Build demo component library
+
+```
+npm run demo
+```
+
+Watch src code for release
+
+```
+npm run watch
+```
+
+Compile src code for release
+
+```
+npm run build
+```
+
 ## Changelog
 
 [changelog](./CHANGELOG.md).
