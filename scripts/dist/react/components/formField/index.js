@@ -227,7 +227,7 @@ var FormField = function (_React$Component) {
             var value = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.state.value || '';
 
             // Check if empty and required
-            var isValid = this.props.required && value || !this.props.required;
+            var isValid = !!(this.props.required && value) || !this.props.required;
 
             // Test regexp validation
             if (this.props.validation && value) {
@@ -352,12 +352,12 @@ FormField.propTypes = {
     }),
     errorMsg: _propTypes2.default.string,
     required: _propTypes2.default.bool,
-    validation: _propTypes2.default.oneOfType([_propTypes2.default.string, _react2.default.PropTypes.object]),
+    validation: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.object]),
     onChange: _propTypes2.default.func,
     onBlur: _propTypes2.default.func,
     onFocus: _propTypes2.default.func,
     onValidate: _propTypes2.default.func,
-    options: _react2.default.PropTypes.arrayOf(_react2.default.PropTypes.object)
+    options: _propTypes2.default.arrayOf(_propTypes2.default.object)
 };
 
 /**

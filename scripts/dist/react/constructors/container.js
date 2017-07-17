@@ -24,7 +24,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 /**
  * Container base class for use with React controller wrappers. Will render
- * it's children directly and get state from the initialState member.
+ * it's children directly
  *
  * @class Container
  * @extends React.Component
@@ -36,10 +36,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
  *
  * class MyComp extends Container {
  *
- *     static initialState = {
- *         foobar: 'foobar'
- *     };
- *
  * }
  */
 var Container = function (_React$Component) {
@@ -48,10 +44,7 @@ var Container = function (_React$Component) {
     function Container(props) {
         _classCallCheck(this, Container);
 
-        var _this = _possibleConstructorReturn(this, (Container.__proto__ || Object.getPrototypeOf(Container)).call(this, props));
-
-        _this.state = _this.initialState;
-        return _this;
+        return _possibleConstructorReturn(this, (Container.__proto__ || Object.getPrototypeOf(Container)).call(this, props));
     }
 
     _createClass(Container, [{

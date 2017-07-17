@@ -24,9 +24,9 @@
  *         super.componentDidMount(); // If overriding ensure this get's fired
  *     }
  *
- *      render() {
- *          return <div ref="hasTouch" />
- *      }
+ *     render() {
+ *         return <div ref="hasTouch" />
+ *     }
  *
  * }
  */
@@ -38,9 +38,12 @@ export default base => class HasTouch extends base {
      * @return {undefined}
      */
     componentDidMount() {
-        if (this.touchStart) this.refs.hasTouch.addEventListener('touchstart', this.touchStart.bind(this));
-        if (this.touchMove) this.refs.hasTouch.addEventListener('touchmove', this.touchMove.bind(this));
-        if (this.touchCancel) this.refs.hasTouch.addEventListener('touchcancel', this.touchCancel.bind(this));
-        if (this.touchEnd) this.refs.hasTouch.addEventListener('touchend', this.touchEnd.bind(this));
+        if (!this.touchBinded) {
+            if (this.touchStart) this.refs.hasTouch.addEventListener('touchstart', this.touchStart.bind(this));
+            if (this.touchMove) this.refs.hasTouch.addEventListener('touchmove', this.touchMove.bind(this));
+            if (this.touchCancel) this.refs.hasTouch.addEventListener('touchcancel', this.touchCancel.bind(this));
+            if (this.touchEnd) this.refs.hasTouch.addEventListener('touchend', this.touchEnd.bind(this));
+            this.touchBinded = true;
+        }
     }
 };
