@@ -12,7 +12,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * mixin helper for superclass mixins
  *
  * @example
- * class MyComp extends mixin(React.Component).with(HasTouch) {}
+ * class MyComp extends mixin(React.Component).with(HasTouch, HasDrag) {}
  */
 var MixinBuilder = function () {
     function MixinBuilder(base) {

@@ -2,7 +2,7 @@
  * mixin helper for superclass mixins
  *
  * @example
- * class MyComp extends mixin(React.Component).with(HasTouch) {}
+ * class MyComp extends mixin(React.Component).with(HasTouch, HasDrag) {}
  */
 class MixinBuilder {
     constructor(base) {
