@@ -1,3 +1,5 @@
 import FormField from './components/formField';
+import Container from './constructors/container';
+import HasTouch from './mixins/hasTouch';
 
-export default { FormField };
+export { FormField, HasTouch, Container };
