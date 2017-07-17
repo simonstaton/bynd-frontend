@@ -188,7 +188,7 @@ class FormField extends React.Component {
      */
     validate(value = this.state.value || '') {
         // Check if empty and required
-        let isValid = (this.props.required && value) || !this.props.required;
+        let isValid = !!(this.props.required && value) || !this.props.required;
 
         // Test regexp validation
         if (this.props.validation && value) {
@@ -297,12 +297,12 @@ FormField.propTypes = {
     }),
     errorMsg: PropTypes.string,
     required: PropTypes.bool,
-    validation: PropTypes.oneOfType([PropTypes.string, React.PropTypes.object]),
+    validation: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     onChange: PropTypes.func,
     onBlur: PropTypes.func,
     onFocus: PropTypes.func,
     onValidate: PropTypes.func,
-    options: React.PropTypes.arrayOf(React.PropTypes.object)
+    options: PropTypes.arrayOf(PropTypes.object)
 };
 
 /**

@@ -1,3 +1,9 @@
+## [1.0.5] - 2017-07-17 - Patch
+
+### Added
+- Adding unit tests
+- Setting up react mixins
+
 ## [1.0.4] - 2017-07-17 - Patch
 
 ### Added
@@ -41,3 +47,4 @@
 [1.0.2]: https://bitbucket.org/byndops/bynd-frontend/commits/a9db8bc2650d1dda4342f2faca4f632df804d33e
 [1.0.3]: https://bitbucket.org/byndops/bynd-frontend/commits/0f0b6d8a48bb4032968a2e6c68a5e15125cca2d0
 [1.0.4]: https://bitbucket.org/byndops/bynd-frontend/commits/cfe1ab2d99709e99089263f9e06acf221efb4231
+[1.0.5]: https://bitbucket.org/byndops/bynd-frontend/commits/d7d4aaf754c2

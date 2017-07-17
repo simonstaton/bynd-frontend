@@ -1,6 +1,6 @@
 {
   "name": "bynd-frontend",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Modular & Reuseable front-end components, helpers and tools",
   "main": "scripts/index.js",
   "readme": "README.md",
@@ -24,7 +24,7 @@
   "scripts": {
     "build": "babel $npm_package_config_scripts_src --out-dir $npm_package_config_scripts_dist --ignore .spec.js",
     "watch": "npm run build -- --watch",
-    "demo": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --watch --content-base demo/",
+    "demo": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --hot --inline --content-base demo/",
     "test:unit": "./node_modules/jest/bin/jest.js",
     "test:lint": "./node_modules/eslint/bin/eslint.js $npm_package_config_scripts_src --ext .js --ext .jsx"
   },
@@ -48,6 +48,7 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "enzyme": "^2.9.1",
     "eslint": "^3.19.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
