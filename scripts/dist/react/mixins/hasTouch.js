@@ -1,7 +1,7 @@
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -38,39 +38,42 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
  *         super.componentDidMount(); // If overriding ensure this get's fired
  *     }
  *
- *      render() {
- *          return <div ref="hasTouch" />
- *      }
+ *     render() {
+ *         return <div ref="hasTouch" />
+ *     }
  *
  * }
  */
 exports.default = function (base) {
-  return function (_base) {
-    _inherits(HasTouch, _base);
+    return function (_base) {
+        _inherits(HasTouch, _base);
 
-    function HasTouch() {
-      _classCallCheck(this, HasTouch);
+        function HasTouch() {
+            _classCallCheck(this, HasTouch);
 
-      return _possibleConstructorReturn(this, (HasTouch.__proto__ || Object.getPrototypeOf(HasTouch)).apply(this, arguments));
-    }
+            return _possibleConstructorReturn(this, (HasTouch.__proto__ || Object.getPrototypeOf(HasTouch)).apply(this, arguments));
+        }
 
-    _createClass(HasTouch, [{
-      key: 'componentDidMount',
+        _createClass(HasTouch, [{
+            key: 'componentDidMount',
 
 
-      /**
-       * Life cycle event - used for binding touchEvents to hasTouch ref
-       * @method componentDidMount
-       * @return {undefined}
-       */
-      value: function componentDidMount() {
-        if (this.touchStart) this.refs.hasTouch.addEventListener('touchstart', this.touchStart.bind(this));
-        if (this.touchMove) this.refs.hasTouch.addEventListener('touchmove', this.touchMove.bind(this));
-        if (this.touchCancel) this.refs.hasTouch.addEventListener('touchcancel', this.touchCancel.bind(this));
-        if (this.touchEnd) this.refs.hasTouch.addEventListener('touchend', this.touchEnd.bind(this));
-      }
-    }]);
+            /**
+             * Life cycle event - used for binding touchEvents to hasTouch ref
+             * @method componentDidMount
+             * @return {undefined}
+             */
+            value: function componentDidMount() {
+                if (!this.touchBinded) {
+                    if (this.touchStart) this.refs.hasTouch.addEventListener('touchstart', this.touchStart.bind(this));
+                    if (this.touchMove) this.refs.hasTouch.addEventListener('touchmove', this.touchMove.bind(this));
+                    if (this.touchCancel) this.refs.hasTouch.addEventListener('touchcancel', this.touchCancel.bind(this));
+                    if (this.touchEnd) this.refs.hasTouch.addEventListener('touchend', this.touchEnd.bind(this));
+                    this.touchBinded = true;
+                }
+            }
+        }]);
 
-    return HasTouch;
-  }(base);
+        return HasTouch;
+    }(base);
 };

@@ -1,7 +1,6 @@
 import 'babel-polyfill';
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import ReactTestUtils from 'react-dom/test-utils';
 import FormField from './index';
 
 describe('FormField react component', () => {
@@ -27,21 +26,21 @@ describe('FormField react component', () => {
     it('should invoke props.onChange if defined', () => {
         const callback = jest.fn();
         const Field = mount(<FormField onChange={callback} />);
-        ReactTestUtils.Simulate.change(Field.find('input').node);
+        Field.find('input').simulate('change');
         expect(callback).toHaveBeenCalled();
     });
 
     it('should invoke props.onFocus if defined', () => {
         const callback = jest.fn();
         const Field = mount(<FormField onFocus={callback} />);
-        ReactTestUtils.Simulate.focus(Field.find('input').node);
+        Field.find('input').simulate('focus');
         expect(callback).toHaveBeenCalled();
     });
 
     it('should invoke props.onBlur if defined', () => {
         const callback = jest.fn();
         const Field = mount(<FormField onBlur={callback} />);
-        ReactTestUtils.Simulate.blur(Field.find('input').node);
+        Field.find('input').simulate('blur');
         expect(callback).toHaveBeenCalled();
     });
 
