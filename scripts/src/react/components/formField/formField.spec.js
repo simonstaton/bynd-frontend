@@ -2,5 +2,5 @@
  * @todo add tests
  */
 test('form field', () => {
-  expect(1).toEqual(1);
+    expect(1).toEqual(1);
 });

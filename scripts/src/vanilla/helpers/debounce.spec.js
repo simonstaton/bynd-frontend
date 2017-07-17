@@ -2,19 +2,19 @@ import 'babel-polyfill';
 import debounce from './debounce';
 
 describe('debounce helper function', () => {
-  it('should debounce function calls', () => {
-    jest.useFakeTimers();
+    it('should debounce function calls', () => {
+        jest.useFakeTimers();
 
-    const callback = jest.fn();
-    const debounced = debounce(callback, 10);
+        const callback = jest.fn();
+        const debounced = debounce(callback, 10);
 
-    // Invoke twice - should run once
-    debounced();
-    debounced();
+        // Invoke twice - should run once
+        debounced();
+        debounced();
 
-    expect(callback).not.toBeCalled();
-    jest.runAllTimers();
-    expect(callback).toBeCalled();
-    expect(callback.mock.calls.length).toEqual(1);
-  });
+        expect(callback).not.toBeCalled();
+        jest.runAllTimers();
+        expect(callback).toBeCalled();
+        expect(callback.mock.calls.length).toEqual(1);
+    });
 });
