@@ -3,6 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.mixin = exports.truncate = exports.throttle = exports.debounce = exports.DOM = exports.Cookies = undefined;
 
 var _cookies = require('./utilities/cookies');
 
@@ -24,6 +25,15 @@ var _truncate = require('./helpers/truncate');
 
 var _truncate2 = _interopRequireDefault(_truncate);
 
+var _mixin = require('./helpers/mixin');
+
+var _mixin2 = _interopRequireDefault(_mixin);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = { Cookies: _cookies2.default, DOM: _dom2.default, debounce: _debounce2.default, throttle: _throttle2.default, truncate: _truncate2.default };
+exports.Cookies = _cookies2.default;
+exports.DOM = _dom2.default;
+exports.debounce = _debounce2.default;
+exports.throttle = _throttle2.default;
+exports.truncate = _truncate2.default;
+exports.mixin = _mixin2.default;

@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -8,25 +8,37 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var DOM = function () {
-    function DOM() {
-        _classCallCheck(this, DOM);
+/**
+ * mixin helper for superclass mixins
+ *
+ * @example
+ * class MyComp extends mixin(React.Component).with(HasTouch) {}
+ */
+var MixinBuilder = function () {
+    function MixinBuilder(base) {
+        _classCallCheck(this, MixinBuilder);
+
+        this.base = base;
     }
 
-    _createClass(DOM, null, [{
-        key: 'canUse',
-        get: function get() {
-            return !!(typeof window !== 'undefined' && window.document && window.document.createElement);
-        }
-    }, {
-        key: 'body',
-        get: function get() {
-            if (!DOM.$body) DOM.$body = document.getElementsByTagName('BODY')[0];
-            return DOM.$body;
+    _createClass(MixinBuilder, [{
+        key: "with",
+        value: function _with() {
+            for (var _len = arguments.length, mixins = Array(_len), _key = 0; _key < _len; _key++) {
+                mixins[_key] = arguments[_key];
+            }
+
+            return mixins.reduce(function (theClass, mixin) {
+                return mixin(theClass);
+            }, this.base);
         }
     }]);
 
-    return DOM;
+    return MixinBuilder;
 }();
 
-exports.default = DOM;
+var mixin = function mixin(base) {
+    return new MixinBuilder(base);
+};
+
+exports.default = mixin;
